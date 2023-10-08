@@ -14,13 +14,13 @@ interface Country {
 
 //Dark or light theme
 const darkMode = document.getElementById('theme_mode');
-const imgElement = darkMode?.querySelector("img");
+const imgElement = darkMode?.querySelector("img") as HTMLImageElement;
 darkMode?.addEventListener('click', () => { // Use an arrow function here
   const body = document.body;
-  const searchBar = document.getElementById('search_input');
-  const region = document.getElementById('region-select'); 
-  searchBar?.classList.toggle('theme');
-  region?.classList.toggle('theme');
+  // const searchBar = document.getElementById('search_input');
+  // const region = document.getElementById('region-select'); 
+  // searchBar?.classList.toggle('theme');
+  // region?.classList.toggle('theme');
 
   darkMode.textContent = darkMode.textContent === `Dark Mode`
     ? `Light Mode` : `Dark Mode`;
@@ -341,7 +341,7 @@ function displayCountriesByName(countryName: string,
   firstLanguage:string,
   countryBorders: string[]|undefined) {
   
-  const docContent = document.getElementById('content');
+  const docContent = document.getElementById('content') as HTMLElement;
   docContent.innerHTML = '';
 
   const countryDetails = `
@@ -378,9 +378,11 @@ function displayCountriesByName(countryName: string,
 
   const backbtn = document.getElementById('backbtn');
   backbtn?.addEventListener('click', function () {
-    const docContent = document.getElementById('content');
+  docContent.innerHTML = '';
+  displayCountries();
+    const darkMode = document.getElementById('theme_mode');
     
-   
-    docContent.innerHTML = '';
-    displayCountries();
-  })
+    
+})
+
+}

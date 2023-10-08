@@ -43,17 +43,6 @@ darkMode === null || darkMode === void 0 ? void 0 : darkMode.addEventListener('c
     // const region = document.getElementById('region-select'); 
     // searchBar?.classList.toggle('theme');
     // region?.classList.toggle('theme');
-    // Get the parent element with id "search-elements"
-    var searchElements = document.getElementById('search-elements');
-    if (searchElements) {
-        // Get all the children elements of the parent
-        var children = searchElements.children;
-        // Loop through the children and add the class "theme" to each
-        for (var i = 0; i < children.length; i++) {
-            var child = children[i];
-            child.classList.add('theme');
-        }
-    }
     darkMode.textContent = darkMode.textContent === "Dark Mode"
         ? "Light Mode" : "Dark Mode";
     body.classList.toggle("dark-theme");
@@ -338,8 +327,8 @@ function displayCountriesByName(countryName, countryFlag, countryFlagAlt, countr
     docContent.innerHTML = countryDetails;
     var backbtn = document.getElementById('backbtn');
     backbtn === null || backbtn === void 0 ? void 0 : backbtn.addEventListener('click', function () {
-        var docContent = document.getElementById('content');
         docContent.innerHTML = '';
         displayCountries();
+        var darkMode = document.getElementById('theme_mode');
     });
 }
