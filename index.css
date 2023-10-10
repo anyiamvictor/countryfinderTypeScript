@@ -1,3 +1,54 @@
+/* CSS Reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img
+{margin:0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* Body Reset */
+body {
+  line-height: 1;
+}
+
+/* Remove list styles (bullet points) */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Hyperlinks */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default button styling */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+
+
+
+
 #content{
     display:block;
 }
@@ -13,7 +64,14 @@ body.dark-theme {
     align-items: center;
     border-bottom: 2px solid rgba(52, 51, 51, 0.893);
     margin:40px;
+    padding:20px;
 }
+
+#header_id h1{
+font-size: 40px;
+font-weight:bold;
+}
+
 
 #theme_mode{
     display:flex;
@@ -165,7 +223,7 @@ option:hover {
 
 #country{
     width:350;
-    height:400px;
+    height:350px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px gray ;
     cursor:pointer;   
@@ -175,7 +233,8 @@ option:hover {
 
 
 #country_image{
-    height:45%;
+    height:60%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -188,18 +247,23 @@ option:hover {
 
 }
 
+
 #country_details{
-    height:45%;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
     word-wrap: break-word;
     padding:12px;
     margin-left:10px;
-    width:300px
+    margin-top:auto;
+    font-size:20px;
 }
+
 
 #country_details h1{
-font-size:25px
+font-size:27px;
+font-weight: bold;
 }
-
 
 
 #full_country_display{
@@ -209,10 +273,11 @@ font-size:25px
     align-items: center;
     gap:4rem;
     padding:1rem;
-
 }
 
+
 #backbtn{
+    box-shadow: 0 0 3px gray;
     align-self: flex-start;
     padding:12px;
     font-size: 18px;;
@@ -236,8 +301,22 @@ font-size:25px
     width:100%
 }
 
+.details{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+    
+}
+
 .details p{
+
     font-size: 22px;;
+}
+
+.details h1{
+font-weight: bold;
+    font-size: 28px;
+
 }
 
 #borders{
@@ -245,6 +324,11 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+}
+
+#borders h1{
+    font-weight:bold;
+    font-size:30px;
 }
 
 #border-elements ul{
