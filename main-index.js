@@ -161,7 +161,7 @@ function fetchCountriesByRegion(region) {
 // Function to create a country element
 function createCountryElement(country) {
     var countryElement = document.createElement('div');
-    countryElement.innerHTML = "\n  <div id='country'>\n    <div id=\"country_image\">\n      <img src=\"".concat(country.countryFlag, "\" alt=\"").concat(country.countryFlagAlt, "\">\n    </div>\n    <div id=\"country_details\">\n      <h1 class=\"country_name\">").concat(country.countryName, "</h1>\n      <p class=\"population\"><b>Population:</b> ").concat(country.countryPopulation, "</p>\n      <p class=\"region\"><b>Region:</b> ").concat(country.countryRegion, "</p>\n      <p class=\"capital\"><b>Capital:</b> ").concat(country.countryCapital, "</p>\n    </div>\n  </div>\n    ");
+    countryElement.innerHTML = "\n  <div id='country'>\n    <div id=\"country_image\">\n      <img src=\"".concat(country.countryFlag, "\"  alt=\"").concat(country.countryFlagAlt, "\">\n    </div>\n    <div id=\"country_details\">\n      <h1 class=\"country_name\">").concat(country.countryName, "</h1>\n      <p class=\"population\"><b>Population:</b> ").concat(country.countryPopulation, "</p>\n      <p class=\"region\"><b>Region:</b> ").concat(country.countryRegion, "</p>\n      <p class=\"capital\"><b>Capital:</b> ").concat(country.countryCapital, "</p>\n    </div>\n  </div>\n    ");
     // Add a click event listener to the country element
     countryElement.addEventListener('click', function () {
         var countryName = country.countryName;

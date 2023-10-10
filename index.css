@@ -170,12 +170,12 @@ option:hover {
     box-shadow: 0px 0px 10px gray ;
     cursor:pointer;   
     overflow: hidden; 
+    word-wrap: break-word;
 }
 
 
 #country_image{
-    /* width: 400px; */
-    height:200px;
+    height:45%;
     overflow: hidden;
 }
 
@@ -183,13 +183,17 @@ option:hover {
     width: 100%;
 }
 
+.country_name{
+    word-wrap: break-word;
 
+}
 
 #country_details{
-    height:200px;
+    height:45%;
     word-wrap: break-word;
     padding:12px;
     margin-left:10px;
+    width:300px
 }
 
 

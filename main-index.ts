@@ -139,7 +139,7 @@ function createCountryElement(country: Country): HTMLDivElement {
   countryElement.innerHTML = `
   <div id='country'>
     <div id="country_image">
-      <img src="${country.countryFlag}" alt="${country.countryFlagAlt}">
+      <img src="${country.countryFlag}"  alt="${country.countryFlagAlt}">
     </div>
     <div id="country_details">
       <h1 class="country_name">${country.countryName}</h1>
